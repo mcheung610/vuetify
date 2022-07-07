@@ -1,0 +1,68 @@
+.v-data-table
+  width: 100%
+
+.v-data-table__table
+  width: 100%
+  border-collapse: separate
+  border-spacing: 0
+
+// .v-data-table__thead
+
+// .v-data-table__tbody
+
+.v-data-table__tr
+  &--focus
+    border: 1px dotted black
+
+.v-data-table__th
+  align-items: center
+  background: rgb(var(--v-theme-surface))
+
+.v-data-table
+  .v-table__wrapper
+    > table
+      > thead
+        > tr
+          th.v-data-table__th--sortable:hover
+            cursor: pointer
+            color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity))
+
+          th:not(.v-data-table__th--sorted)
+            .v-data-table-header__sort-icon
+              opacity: 0
+
+            &:hover
+              .v-data-table-header__sort-icon
+                opacity: 1
+
+.v-data-table__td
+  height: 52px
+  background: rgb(var(--v-theme-surface))
+
+.v-data-table-column--fixed
+  position: sticky
+  z-index: 2
+  left: 0
+  border-right: 1px solid black
+
+.v-data-table__tr--group-header
+  .v-data-table__td
+    background: darkgrey
+
+    > span
+      padding-left: 5px
+
+.v-data-table--loading
+  .v-data-table__td
+    opacity: 0.3
+
+.v-data-table__progress
+  th
+    position: relative
+    border: none !important
+    height: auto !important
+
+  .v-progress-linear
+    position: absolute
+    top: 0
+    left: 0
